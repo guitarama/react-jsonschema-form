@@ -18,6 +18,15 @@ function BaseInput(props) {
     return props.onChange(value === "" ? undefined : value);
   };
   return (
+    inputProps.type === 'text' ?
+    <input
+      {...inputProps}
+      className="form-control"
+      readOnly={readonly}
+      autoFocus={autofocus}
+      defaultValue={typeof value === "undefined" ? "" : value}
+      onChange={e => {}}
+      onBlur={_onChange} /> :
     <input
       {...inputProps}
       className="form-control"
