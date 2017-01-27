@@ -19,13 +19,14 @@ function TextareaWidget({
     <textarea
       id={id}
       className="form-control"
-      value={typeof value === "undefined" ? "" : value}
+      defaultValue={typeof value === "undefined" ? "" : value}
       placeholder={placeholder}
       required={required}
       disabled={disabled}
       readOnly={readonly}
       autoFocus={autofocus}
-      onChange={_onChange} />
+      onChange={e => {}}
+      onBlur={_onChange} />
   );
 }
 
